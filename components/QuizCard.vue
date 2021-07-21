@@ -9,7 +9,10 @@
           <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
-        <div>ロゴ</div>
+        <div class="img">
+          <img :src="imageName" height="200px">
+        </div>
+        <div class="question text-h6 text-md-h4 font-weight-black">「{{ answerText }}」</div>
 
         <v-card-actions>
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2">分かった！</v-btn>
@@ -33,14 +36,22 @@ export default Vue.extend({
     }
   },
   props: {
-    questionText: {
-      type: String,
-      default: '問題'
-    },
     questionNumber: {
       type: String,
       default: "0"
     },
+    questionText: {
+      type: String,
+      default: '問題'
+    },
+    answerText: {
+      type: String,
+      default: '答え'
+    },
+    imageName: {
+      type: String,
+      default: 'error.jpg'
+    }
   }
 })
 </script>
@@ -62,5 +73,9 @@ export default Vue.extend({
 .question {
   text-align: center;
   margin: 5px 0;
+}
+.img {
+  text-align : center;
+  margin: 15px 0 5px 0;
 }
 </style>
