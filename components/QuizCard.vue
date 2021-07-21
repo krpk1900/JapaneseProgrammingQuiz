@@ -1,14 +1,20 @@
 <template>
-  <v-dialog v-model="isShowDialog" width="510" persistent>
+  <v-dialog v-model="isShowDialog" width="520" persistent>
     <template v-slot:activator="{ on, attrs }">
       <a v-bind="attrs" v-on="on" style="color: #099e9e;">　</a>
     </template>
     <v-card>
       <div class="card cyan darken-1 white--text">
-        <div class="text-h6 text-md-h4 font-weight-black">Q{{ questionNumber }}. {{ questionText }}</div>
+        <div class="question text-h6 text-md-h4 font-weight-black">第
+          <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問
+        </div>
+        <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
         <div>ロゴ</div>
-        <v-btn class="btn light-blue lighten-1 white--text text-h4 font-weight-black" elevation="2">分かった！</v-btn>
-        <v-btn class="btn red lighten-2 white--text text-h4 font-weight-black" elevation="2">分からない</v-btn>
+
+        <v-card-actions>
+          <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2">分かった！</v-btn>
+          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" elevation="2">分からない</v-btn>
+        </v-card-actions>
       </div>
     </v-card>
   </v-dialog>
@@ -22,9 +28,19 @@ export default Vue.extend({
       isShowDialog: true as boolean,
       isShowLogo: false as boolean,
       isShowAnser: false as boolean,
-      questionNumber: 1 as number,
-      questionText: "凄い記述を作り上げる言語" as string
+      //questionNumber: 1 as number,
+      //questionText: "凄い記述を作り上げる言語" as string
     }
+  },
+  props: {
+    questionText: {
+      type: String,
+      default: '問題'
+    },
+    questionNumber: {
+      type: String,
+      default: "0"
+    },
   }
 })
 </script>
@@ -34,6 +50,17 @@ export default Vue.extend({
   padding: 10px !important;
 }
 .btn {
-  padding: 30px 15px !important;
+  width: 200px;
+  height: 60px !important;
+}
+.btn-left {
+  margin: 0 auto 0 15px;
+}
+.btn-right {
+  margin: 0 15px 0 auto;
+}
+.question {
+  text-align: center;
+  margin: 5px 0;
 }
 </style>
