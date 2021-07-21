@@ -1,5 +1,5 @@
 <template>
-  <QuizCard questionNumber="11" questionText="凄い記述を作り上げる言語" answerText="Ruby on Rails" imageName="rubyonrails.png"></QuizCard>
+  <QuizCard questionNumber="11" questionText="凄い記述を作り上げる言語" answerText="HTML" imageName="html.png"></QuizCard>
 </template>
 
 <script lang="ts">

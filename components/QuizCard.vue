@@ -9,14 +9,22 @@
           <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
-        <div class="img">
-          <img :src="imageName" height="200px">
+        <div v-if="isShowAnser" class="answer-area">
+          <div class="img">
+            <img :src="imageName" height="200px">
+          </div>
+          <div class="question text-h6 text-md-h4 font-weight-black">「{{ answerText }}」</div>
         </div>
-        <div class="question text-h6 text-md-h4 font-weight-black">「{{ answerText }}」</div>
+        <div v-else class="answer-area-off"></div>
+
+
+
 
         <v-card-actions>
-          <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2">分かった！</v-btn>
-          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" elevation="2">分からない</v-btn>
+          <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
+          @click="isShowAnser=!isShowAnser">分かった！</v-btn>
+          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
+          @click="isShowAnser=!isShowAnser">分からない</v-btn>
         </v-card-actions>
       </div>
     </v-card>
@@ -31,8 +39,6 @@ export default Vue.extend({
       isShowDialog: true as boolean,
       isShowLogo: false as boolean,
       isShowAnser: false as boolean,
-      //questionNumber: 1 as number,
-      //questionText: "凄い記述を作り上げる言語" as string
     }
   },
   props: {
@@ -76,6 +82,12 @@ export default Vue.extend({
 }
 .img {
   text-align : center;
-  margin: 15px 0 5px 0;
+  margin: 20px 0 5px 0;
+}
+.answer-area {
+  height: 260px;
+}
+.answer-area-off {
+  height: 275px;
 }
 </style>
