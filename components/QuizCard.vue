@@ -22,9 +22,6 @@
           <img src="hatena.png" height="300px">
         </div>
 
-
-
-
         <v-card-actions>
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
           @click="isShowAnswer = true" elevation="2">分かった！</v-btn>
