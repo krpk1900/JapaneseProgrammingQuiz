@@ -1,6 +1,10 @@
 <template>
-  <QuizCard v-if="isShowDialogs1"
-  questionNumber="11" questionText="凄い記述を作り上げる言語" answerText="HTML" imageName="html.png"></QuizCard>
+  <div>
+    <QuizCard v-if="isShowDialogs1" @next="isShowDialogs2 = true"
+    questionNumber="1" questionText="線路上の紅玉" answerText="Ruby on Rails" imageName="rubyonrails.png"></QuizCard>
+    <QuizCard v-if="isShowDialogs2" @next="isShowDialogs3 = true"
+    questionNumber="2" questionText="碁" answerText="Go" imageName="go.jpeg"></QuizCard>
+  </div>
 </template>
 
 <script lang="ts">
@@ -9,6 +13,7 @@ export default Vue.extend({
   data() {
     return{
       isShowDialogs1: true as boolean,
+      isShowDialogs2: false as boolean,
     }
   },
 })

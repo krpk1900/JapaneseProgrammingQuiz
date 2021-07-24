@@ -22,13 +22,13 @@
 
         <v-card-actions>
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="isShowAnswer=!isShowAnswer">分かった！</v-btn>
+          @click="isShowAnswer = true">分かった！</v-btn>
           <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="isShowAnswer=!isShowAnswer">分からない</v-btn>
+          @click="isShowAnswer = true">分からない</v-btn>
         </v-card-actions>
         <v-card-actions>
           <v-btn v-if="isShowAnswer" class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="isShowAnswer=!isShowAnswer">次の問題</v-btn>
+          @click="nextQuestion">次の問題</v-btn>
           <div v-else class="btn-next-off"></div>
         </v-card-actions>
       </div>
@@ -44,6 +44,12 @@ export default Vue.extend({
       isShowDialog: true as boolean,
       isShowLogo: false as boolean,
       isShowAnswer: false as boolean,
+    }
+  },
+  methods: {
+    nextQuestion() {
+      this.isShowDialog = false;
+      this.$emit('next')
     }
   },
   props: {
