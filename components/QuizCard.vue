@@ -10,28 +10,30 @@
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
         <div v-if="isShowAnswer" class="answer-area">
-          <div class="img">
+          <div v-if="questionNumber != 11" class="img">
+            <img :src="imageName" height="230px">
+          </div>
+          <div v-else class="img">
             <img :src="imageName" height="200px">
           </div>
-          <div class="question text-h6 text-md-h4 font-weight-black">{{ answerText }}</div>
+          <div class="answer-text text-h6 text-md-h4 font-weight-black">{{ answerText }}</div>
         </div>
         <div v-else class="img-hatena">
-          <img src="hatena.png" height="268px">
+          <img src="hatena.png" height="300px">
         </div>
 
 
 
 
         <v-card-actions>
-          <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="isShowAnswer = true">分かった！</v-btn>
-          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="isShowAnswer = !isShowAnswer">分からない</v-btn>
+          <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
+          @click="isShowAnswer = true" elevation="2">分かった！</v-btn>
+          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black"
+          @click="isShowAnswer = !isShowAnswer" elevation="2">分からない</v-btn>
         </v-card-actions>
         <v-card-actions>
-          <v-btn v-if="isShowAnswer" class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="nextQuestion">次の問題</v-btn>
-          <div v-else class="btn-next-off"></div>
+          <v-btn class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
+          @click="nextQuestion" elevation="2">次の問題</v-btn>
         </v-card-actions>
       </div>
     </v-card>
@@ -52,7 +54,7 @@ export default Vue.extend({
     nextQuestion() {
       this.isShowDialog = false;
       this.$emit('next')
-    }
+    },
   },
   props: {
     questionNumber: {
@@ -92,10 +94,11 @@ export default Vue.extend({
 .btn-next {
   margin: 0 auto;
 }
-.btn-next-off {
-  height: 60px;
-}
 .question {
+  text-align: center;
+  margin: 5px 0;
+}
+.answer-text {
   text-align: center;
   margin: 5px 0;
 }
@@ -105,11 +108,12 @@ export default Vue.extend({
 }
 .img-hatena {
   text-align : center;
+  margin: 7px;
 }
 .arrow {
   font-size: 100px;
 }
 .answer-area {
-  height: 260px;
+  height: 300px;
 }
 </style>
