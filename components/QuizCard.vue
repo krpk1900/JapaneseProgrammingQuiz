@@ -15,7 +15,9 @@
           </div>
           <div class="question text-h6 text-md-h4 font-weight-black">「{{ answerText }}」</div>
         </div>
-        <div v-else class="answer-area-off"></div>
+        <div v-else class="img-hatena">
+          <img src="hatena.png" height="268px">
+        </div>
 
 
 
@@ -24,7 +26,7 @@
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
           @click="isShowAnswer = true">分かった！</v-btn>
           <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" elevation="2"
-          @click="isShowAnswer = true">分からない</v-btn>
+          @click="isShowAnswer = !isShowAnswer">分からない</v-btn>
         </v-card-actions>
         <v-card-actions>
           <v-btn v-if="isShowAnswer" class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" elevation="2"
@@ -101,13 +103,13 @@ export default Vue.extend({
   text-align : center;
   margin: 20px 0 5px 0;
 }
+.img-hatena {
+  text-align : center;
+}
 .arrow {
   font-size: 100px;
 }
 .answer-area {
   height: 260px;
-}
-.answer-area-off {
-  height: 275px;
 }
 </style>
