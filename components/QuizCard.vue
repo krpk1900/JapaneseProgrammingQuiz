@@ -13,7 +13,7 @@
           <div class="img">
             <img :src="imageName" height="200px">
           </div>
-          <div class="question text-h6 text-md-h4 font-weight-black">「{{ answerText }}」</div>
+          <div class="question text-h6 text-md-h4 font-weight-black">{{ answerText }}</div>
         </div>
         <div v-else class="img-hatena">
           <img src="hatena.png" height="268px">
