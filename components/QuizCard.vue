@@ -24,9 +24,9 @@
 
         <v-card-actions>
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
-          @click="isShowAnswer = true" elevation="2">分かった！</v-btn>
-          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black"
-          @click="isShowAnswer = !isShowAnswer" elevation="2">分からない</v-btn>
+          @click="isShowAnswer = true;" elevation="2">分かった！</v-btn>
+          <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
+          @click="isShowAnswer = true" elevation="2">分からない</v-btn>
         </v-card-actions>
         <v-card-actions>
           <v-btn class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
@@ -69,7 +69,7 @@ export default Vue.extend({
     imageName: {
       type: String,
       default: 'error.jpg'
-    }
+    },
   }
 })
 </script>

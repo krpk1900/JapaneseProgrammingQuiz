@@ -22,7 +22,7 @@
     questionNumber="10" questionText="凄価羅" answerText="Scala (スカラ)" imageName="scala.png"></QuizCard>
     <QuizCard v-if="isShowDialogs11" @next="isShowDialogs12 = true"
     questionNumber="11" questionText="凄い記述を作り上げる言語" answerText="HTML (HyperTextMarkupLanguage)" imageName="html.png"></QuizCard>
-    <QuizCard v-if="isShowDialogs12" @next="isShowDialogs12 = true"
+    <QuizCard v-if="isShowDialogs12" @next="isFinished = true"
     questionNumber="12" questionText="乳尊" answerText="Python (パイソン)" imageName="python.png"></QuizCard>
   </div>
 </template>
@@ -44,8 +44,11 @@ export default Vue.extend({
       isShowDialogs10: false as boolean,
       isShowDialogs11: false as boolean,
       isShowDialogs12: false as boolean,
+      isFinished: false as boolean,
     }
   },
+  methods: {
+  }
 })
 </script>
 
