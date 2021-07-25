@@ -48,11 +48,11 @@ export default Vue.extend({
     }
   },
   methods: {
-    nextQuestion() {
+    nextQuestion():void {
       this.isShowDialog = false;
       this.$emit('next')
     },
-    incrementScore() {
+    incrementScore():void {
       console.log(`incrementScore()`)
       this.$store.commit('incrementScore');
     }
