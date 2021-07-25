@@ -8,19 +8,7 @@
         <div class="question text-h6 text-md-h4 font-weight-black">第
           <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問{{ this.$store.state.score }}点
         </div>
-        <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
-        <div v-if="isShowAnswer" class="answer-area">
-          <div v-if="questionNumber != 11" class="img">
-            <img :src="imageName" height="230px">
-          </div>
-          <div v-else class="img">
-            <img :src="imageName" height="200px">
-          </div>
-          <div class="answer-text text-h6 text-md-h4 font-weight-black">{{ answerText }}</div>
-        </div>
-        <div v-else class="img-hatena">
-          <img src="hatena.png" height="300px">
-        </div>
+
 
         <v-card-actions>
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
@@ -43,36 +31,11 @@ export default Vue.extend({
   data() {
     return{
       isShowDialog: true as boolean,
-      isShowAnswer: false as boolean,
     }
   },
   methods: {
-    nextQuestion():void {
-      this.isShowDialog = false;
-      this.$emit('next')
-    },
-    incrementScore():void {
-      console.log(`incrementScore()`)
-      this.$store.commit('incrementScore');
-    }
   },
   props: {
-    questionNumber: {
-      type: String,
-      default: "0"
-    },
-    questionText: {
-      type: String,
-      default: '問題'
-    },
-    answerText: {
-      type: String,
-      default: '答え'
-    },
-    imageName: {
-      type: String,
-      default: 'error.jpg'
-    },
   }
 })
 </script>

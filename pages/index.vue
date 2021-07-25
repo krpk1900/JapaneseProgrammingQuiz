@@ -1,5 +1,7 @@
 <template>
   <div>
+    <LandingPage v-if="isShowLandingPage" @start="isShowDialogs1 = true"></LandingPage>
+
     <QuizCard v-if="isShowDialogs1" @next="isShowDialogs2 = true"
     questionNumber="1" questionText="線路上の紅玉" answerText="Ruby on Rails" imageName="rubyonrails.png"></QuizCard>
     <QuizCard v-if="isShowDialogs2" @next="isShowDialogs3 = true"
@@ -22,8 +24,10 @@
     questionNumber="10" questionText="凄価羅" answerText="Scala (スカラ)" imageName="scala.png"></QuizCard>
     <QuizCard v-if="isShowDialogs11" @next="isShowDialogs12 = true"
     questionNumber="11" questionText="凄い記述を作り上げる言語" answerText="HTML (HyperTextMarkupLanguage)" imageName="html.png"></QuizCard>
-    <QuizCard v-if="isShowDialogs12" @next="isFinished = true"
+    <QuizCard v-if="isShowDialogs12" @next="isShowResult = true"
     questionNumber="12" questionText="乳尊" answerText="Python (パイソン)" imageName="python.png"></QuizCard>
+    <Result v-if="isShowResult"></Result>
+
   </div>
 </template>
 
@@ -32,7 +36,8 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return{
-      isShowDialogs1: true as boolean,
+      isShowLandingPage: true as boolean,
+      isShowDialogs1: false as boolean,
       isShowDialogs2: false as boolean,
       isShowDialogs3: false as boolean,
       isShowDialogs4: false as boolean,
@@ -44,7 +49,7 @@ export default Vue.extend({
       isShowDialogs10: false as boolean,
       isShowDialogs11: false as boolean,
       isShowDialogs12: false as boolean,
-      isFinished: false as boolean,
+      isShowResult: false as boolean,
     }
   },
   methods: {
