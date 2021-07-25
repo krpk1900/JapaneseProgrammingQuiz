@@ -6,7 +6,7 @@
     <v-card>
       <div class="card cyan darken-1 white--text">
         <div class="question text-h6 text-md-h4 font-weight-black">第
-          <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問
+          <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問{{ this.$store.state.score }}点
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
         <div v-if="isShowAnswer" class="answer-area">
@@ -24,7 +24,7 @@
 
         <v-card-actions>
           <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
-          @click="isShowAnswer = true;" elevation="2">分かった！</v-btn>
+          @click="isShowAnswer = true; incrementScore()" elevation="2">分かった！</v-btn>
           <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
           @click="isShowAnswer = true" elevation="2">分からない</v-btn>
         </v-card-actions>
@@ -52,6 +52,10 @@ export default Vue.extend({
       this.isShowDialog = false;
       this.$emit('next')
     },
+    incrementScore() {
+      console.log(`incrementScore()`)
+      this.$store.commit('incrementScore');
+    }
   },
   props: {
     questionNumber: {
