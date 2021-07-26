@@ -7,9 +7,8 @@
       <div class="card cyan darken-1 white--text">
         <div class="question text-h6 text-md-h4 font-weight-black">日本人のための<br>プログラミングクイズ</div>
         <div class="question text-h6 text-md-h5 font-weight-black">
-          英語が苦手でも大丈夫！<br>
-          楽しみながらプログラミング言語やフレームワークの名前を覚えられるクイズです！
-          </div>
+          英語が苦手な方でもプログラミング言語の<br>名前を覚えられるクイズです！
+        </div>
 
         <v-card-actions>
           <v-btn class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black"
