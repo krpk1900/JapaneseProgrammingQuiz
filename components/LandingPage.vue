@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="isShowDialog" width="520" persistent>
+  <v-dialog v-model="isShowDialog" width="540" persistent>
     <template v-slot:activator="{ on, attrs }">
       <a v-bind="attrs" v-on="on" style="color: #099e9e;">　</a>
     </template>
