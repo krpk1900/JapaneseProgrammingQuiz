@@ -1,12 +1,12 @@
 <template>
-  <v-dialog v-model="isShowDialog" width="540" persistent>
+  <v-dialog v-model="isShowDialog" width="570" persistent>
     <template v-slot:activator="{ on, attrs }">
       <a v-bind="attrs" v-on="on" style="color: #099e9e;">　</a>
     </template>
     <v-card>
       <div class="card cyan darken-1 white--text">
         <div class="question text-h6 text-md-h4 font-weight-black">第
-          <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 12問{{ this.$store.state.score }}点
+          <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 10問
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
         <div v-if="isShowAnswer" class="answer-area">
