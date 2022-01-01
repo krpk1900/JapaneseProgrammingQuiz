@@ -10,11 +10,8 @@
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
         <div v-if="isShowAnswer" class="answer-area">
-          <div v-if="questionNumber != 11" class="img">
+          <div class="img">
             <img :src="imageName" height="230px">
-          </div>
-          <div v-else class="img">
-            <img :src="imageName" height="200px">
           </div>
           <div class="answer-text text-h6 text-md-h4 font-weight-black">{{ answerText }}</div>
         </div>
