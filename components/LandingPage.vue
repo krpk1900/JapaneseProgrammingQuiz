@@ -5,14 +5,13 @@
     </template>
     <v-card>
       <div class="card cyan darken-1 white--text">
-        <div class="question text-h6 text-md-h4 font-weight-black">日本人のための<br>プログラミングクイズ</div>
-        <div class="question text-h6 text-md-h5 font-weight-black">
-          英語が苦手な方でもプログラミング言語の<br>名前を覚えられるクイズです！
+        <div class="question text-h6 text-md-h4 font-weight-black">Webエンジニアのくせに<br>全問解けねぇ奴いる？</div>
+        <div class="img">
+          <img src="touribe.png" height="400px">
         </div>
-
         <v-card-actions>
-          <v-btn class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black"
-          @click="start" elevation="2">スタート</v-btn>
+          <v-btn class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" width=250px
+          @click="start" elevation="2">全問潰すぞ!!!</v-btn>
         </v-card-actions>
       </div>
     </v-card>
