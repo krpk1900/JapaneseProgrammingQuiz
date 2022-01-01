@@ -7,7 +7,7 @@
     <QuizCard v-if="isShowDialogs2" @next="isShowDialogs3 = true"
     questionNumber="2" questionText="濃度" answerText="Node.js" imageName="nodejs.png"></QuizCard>
     <QuizCard v-if="isShowDialogs3" @next="isShowDialogs4 = true"
-    questionNumber="3" questionText="鳥の顔文字" answerText="Kotlin（コトリン）" imageName="kotlin.png"></QuizCard>
+    questionNumber="3" questionText="🐤" answerText="Kotlin（コトリン）" imageName="kotlin.png"></QuizCard>
     <QuizCard v-if="isShowDialogs4" @next="isShowDialogs5 = true"
     questionNumber="4" questionText="次" answerText="Next.js" imageName="nextjs.png"></QuizCard>
     <QuizCard v-if="isShowDialogs5" @next="isShowDialogs6 = true"
