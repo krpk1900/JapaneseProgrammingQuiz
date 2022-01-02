@@ -4,7 +4,7 @@
       <a v-bind="attrs" v-on="on" style="color: #099e9e;">　</a>
     </template>
     <v-card>
-      <div class="card cyan darken-1 white--text">
+      <div class="card red darken-4 white--text">
         <div class="question text-h6 text-md-h4 font-weight-black">第
           <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 10問
         </div>
@@ -20,13 +20,13 @@
         </div>
 
         <v-card-actions>
-          <v-btn class="btn btn-left light-blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
+          <v-btn class="btn btn-left blue lighten-1 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
           @click="isShowAnswer = true; incrementScore()" elevation="2">分かった！</v-btn>
           <v-btn class="btn btn-right red lighten-2 white--text text-h6 text-md-h4 font-weight-black" :disabled="isShowAnswer"
           @click="isShowAnswer = true" elevation="2">分からない</v-btn>
         </v-card-actions>
         <v-card-actions>
-          <v-btn class="btn btn-next cyan white--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
+          <v-btn class="btn btn-next grey lighten-5 black--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
           @click="nextQuestion" elevation="2">次の問題</v-btn>
         </v-card-actions>
       </div>
