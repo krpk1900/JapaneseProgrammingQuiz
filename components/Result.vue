@@ -1,14 +1,14 @@
 <template>
-  <v-dialog v-model="isShowDialog" width="570" persistent>
+  <v-dialog v-model="isShowDialog" width="550" persistent>
     <template v-slot:activator="{ on, attrs }">
       <a v-bind="attrs" v-on="on" style="color: #099e9e;">　</a>
     </template>
     <v-card>
-      <div class="card cyan darken-1 white--text">
-        <div class="question text-h6 text-md-h4 font-weight-black">あなたの点数は
-          <span class="text-h4 text-md-h2 font-weight-black">{{ this.$store.state.score }}</span>/10点でした！
+      <div class="card red darken-4 white--text">
+        <div class="question text-h6 text-md-h5 font-weight-black">あなたの点数は
+          <span class="text-h4 text-md-h3 font-weight-black">{{ this.$store.state.score }}</span>/10点でした！
         </div>
-        <div class="text-center text-h6 font-weight-bold">
+        <div class="text-center text-h6 text-md-h4 font-weight-bold">
           {{ this.message }}
         </div>
 
@@ -41,11 +41,11 @@ export default Vue.extend({
   created: function(){
     console.log(`created`)
     if( this.$store.state.score == 10){
-      this.message = "CTO級です！"
+      this.message = "マイキー級エンジニア"
     } else if(8 <= this.$store.state.score && this.$store.state.score <= 9){
-      this.message = "テックリード級です！"
+      this.message = "ドラケン級エンジニア"
     } else if(5 <= this.$store.state.score && this.$store.state.score <= 7){
-      this.message = "ミドルエンジニア級です！"
+      this.message = "パーちん級エンジニア"
     } else if(0 <= this.$store.state.score && this.$store.state.score <= 4){
       this.message = "駆け出しエンジニア級です…"
     }
