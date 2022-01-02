@@ -6,9 +6,13 @@
     <v-card>
       <div class="card red darken-4 white--text">
         <div class="question text-h6 text-md-h5 font-weight-black">あなたの点数は
-          <span class="text-h4 text-md-h3 font-weight-black">{{ this.$store.state.score }}</span>/10点でした！
+          <span class="text-h4 text-md-h2 font-weight-black">{{ this.$store.state.score }}</span>/10点でした！
         </div>
-        <div class="text-center text-h6 text-md-h4 font-weight-bold">
+        <div class="img">
+          <img :src="this.imageName" height="350px">
+        </div>
+        <div class="text-caption black--text" style="text-align : center;">Ⓒ和久井健・講談社／<br>アニメ「東京リベンジャーズ」製作委員会</div>
+        <div class="text-center text-h6 text-md-h4 font-weight-bold" style="margin-top: 10px;">
           {{ this.message }}
         </div>
 
@@ -29,6 +33,7 @@ export default Vue.extend({
     return{
       isShowDialog: true as boolean,
       message: "デフォルトメッセージ" as string,
+      imageName: "default.png" as string,
     }
   },
   methods: {
@@ -40,14 +45,18 @@ export default Vue.extend({
   },
   created: function(){
     console.log(`created`)
-    if( this.$store.state.score == 10){
+    if(9 <= this.$store.state.score && this.$store.state.score <= 10){
       this.message = "マイキー級エンジニア"
-    } else if(8 <= this.$store.state.score && this.$store.state.score <= 9){
+      this.imageName = "maiki.png"
+    } else if(7 <= this.$store.state.score && this.$store.state.score <= 8){
       this.message = "ドラケン級エンジニア"
-    } else if(5 <= this.$store.state.score && this.$store.state.score <= 7){
+      this.imageName = "doraken.png"
+    } else if(5 <= this.$store.state.score && this.$store.state.score <= 6){
       this.message = "パーちん級エンジニア"
+      this.imageName = "pachin.png"
     } else if(0 <= this.$store.state.score && this.$store.state.score <= 4){
-      this.message = "駆け出しエンジニア級です…"
+      this.message = "パーのダチ級エンジニア"
+      this.imageName = "dachi.jpg"
     }
   }
 })
@@ -61,10 +70,14 @@ export default Vue.extend({
   text-transform: none !important;
   width: 250px;
   height: 60px !important;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .question {
   text-align: center;
   margin: 5px 0;
+}
+.img {
+  text-align : center;
+  margin: 20px 0 5px 0;
 }
 </style>
