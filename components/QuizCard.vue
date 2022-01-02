@@ -26,8 +26,10 @@
           @click="isShowAnswer = true" elevation="2">分からない</v-btn>
         </v-card-actions>
         <v-card-actions>
-          <v-btn class="btn btn-next grey lighten-5 black--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
+          <v-btn v-if="questionNumber != 10" class="btn btn-next grey lighten-5 black--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
           @click="nextQuestion" elevation="2">次の問題</v-btn>
+          <v-btn v-else class="btn btn-next grey lighten-5 black--text text-h6 text-md-h4 font-weight-black" :disabled="!isShowAnswer"
+          @click="nextQuestion" elevation="2">結果へ</v-btn>
         </v-card-actions>
       </div>
     </v-card>
