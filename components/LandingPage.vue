@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="isShowDialog" width="550" persistent>
+  <v-dialog v-model="isShowDialog" width="560" persistent>
     <template v-slot:activator="{ on, attrs }">
       <a v-bind="attrs" v-on="on" style="color: #099e9e;">　</a>
     </template>
@@ -11,8 +11,8 @@
           <div class="text-caption">Ⓒ和久井健・講談社／<br>アニメ「東京リベンジャーズ」製作委員会</div>
         </div>
         <v-card-actions>
-          <v-btn class="btn btn-next grey lighten-5 black--text text-h6 text-md-h4 font-weight-black" width=250px
-          @click="start" elevation="2">全問潰すぞ!!!</v-btn>
+          <v-btn class="btn btn-next grey lighten-5 black--text text-h6 text-md-h4 font-weight-black" width="250px"
+          @click="start" elevation="24">全問潰すぞ!!!</v-btn>
         </v-card-actions>
       </div>
     </v-card>
