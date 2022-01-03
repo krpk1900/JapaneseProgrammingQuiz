@@ -17,7 +17,7 @@
     <QuizCard v-if="isShowDialogs7" @next="isShowDialogs8 = true"
     questionNumber="7" questionText="絵里www" answerText="elixir (エリクサ)" imageName="elixir.png"></QuizCard>
     <QuizCard v-if="isShowDialogs8" @next="isShowDialogs9 = true"
-    questionNumber="8" questionText="海言語" answerText="C言語" imageName="c.png"></QuizCard>
+    questionNumber="8" questionText="海言語" answerText="C言語（シー言語）" imageName="c.png"></QuizCard>
     <QuizCard v-if="isShowDialogs9" @next="isShowDialogs10 = true"
     questionNumber="9" questionText="凄価羅" answerText="Scala (スカラ)" imageName="scala_black.png"></QuizCard>
     <QuizCard v-if="isShowDialogs10" @next="isShowResult = true"
