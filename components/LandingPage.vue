@@ -5,7 +5,7 @@
     </template>
     <v-card>
       <div class="card red darken-4 black--text">
-        <div class="question text-h6 text-md-h4 font-weight-black">Webエンジニアのくせに<br>全問解けねぇ奴いる？</div>
+        <div class="question text-h6 text-md-h4 font-weight-black">Webエンジニアのくせに<br>解けねぇ奴いる？</div>
         <div class="img">
           <img src="touribe.png" height="400px">
           <div class="text-caption">Ⓒ和久井健・講談社／<br>アニメ「東京リベンジャーズ」製作委員会</div>
