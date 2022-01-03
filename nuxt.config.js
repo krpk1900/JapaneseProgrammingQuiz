@@ -10,7 +10,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     //titleTemplate: '%s - JapaneseProgrammingQuiz',
-    title: '愛美愛主潰すぞ!!!',
+    title: 'Webエンジニアのくせに解けねぇ奴いる？',
     htmlAttrs: {
       lang: 'ja'
     },
