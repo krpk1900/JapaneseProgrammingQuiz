@@ -33,12 +33,12 @@ export default Vue.extend({
     return{
       isShowDialog: true as boolean,
       message: "デフォルトメッセージ" as string,
-      imageName: "default.png" as string,
+      imageName: "maiki.png" as string,
     }
   },
   methods: {
     shareMessage():string {
-      return `https://twitter.com/share?url=https://perfect-security.jp/%0a&via=krpk1900_dev&related=krpk1900_dev&hashtags=日本人のためのプログラミングクイズ,クソアプリ%0a&text=あなたの点数は${this.$store.state.score}点でした！%0aCTOへの道まではあと${12-this.$store.state.score}点です！%0a`
+      return `https://twitter.com/share?url=https://perfect-security.jp/%0a&via=krpk1900_dev&related=krpk1900_dev&hashtags=Webエンジニアのくせに解けねぇ奴いる?,いねえよなぁ!!?,プログラミングなぞなぞ,クソアプリ%0a&text=あなたの点数は${this.$store.state.score}点でした！%0a${this.message}%0a`
     },
   },
   props: {
