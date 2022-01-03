@@ -38,7 +38,7 @@ export default Vue.extend({
   },
   methods: {
     shareMessage():string {
-      return `https://twitter.com/share?url=https://perfect-security.jp/%0a&via=krpk1900_dev&related=krpk1900_dev&hashtags=Webエンジニアのくせに解けねぇ奴いる?,いねえよなぁ!!?,プログラミングなぞなぞ,クソアプリ%0a&text=あなたの点数は${this.$store.state.score}点でした！%0a${this.message}%0a`
+      return `https://twitter.com/share?url=https://programming-riddle.netlify.app//%0a&via=krpk1900_dev&related=krpk1900_dev&hashtags=Webエンジニアのくせに解けねぇ奴いる?,いねえよなぁ!!?,プログラミングなぞなぞ,クソアプリ%0a&text=あなたの点数は${this.$store.state.score}点でした！%0a${this.message}%0a`
     },
   },
   props: {
