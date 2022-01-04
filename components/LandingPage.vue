@@ -38,7 +38,7 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 480px) {
   .touribe {
     height: 350px;

@@ -62,7 +62,7 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style scoped>
 .card {
   padding: 10px !important;
 }

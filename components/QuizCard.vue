@@ -79,7 +79,7 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 480px) {
   .btn {
     width: 130px;
