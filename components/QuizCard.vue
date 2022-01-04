@@ -7,8 +7,8 @@
       <div class="card red darken-4 white--text">
         <div class="question text-h6 text-md-h4 font-weight-black">　　　　第
           <span class="text-h4 text-md-h2 font-weight-black">{{ questionNumber }}</span>問 / 10問
-          <span v-if="questionNumber == 2||questionNumber == 4||questionNumber == 6||questionNumber == 8">　★☆☆</span>
-          <span v-else-if="questionNumber == 1||questionNumber == 3||questionNumber == 5||questionNumber == 9">　★★☆</span>
+          <span v-if="questionNumber == 1||questionNumber == 2||questionNumber == 6||questionNumber == 9">　★☆☆</span>
+          <span v-else-if="questionNumber == 3||questionNumber == 4">　★★☆</span>
           <span v-else>　★★★</span>
         </div>
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>

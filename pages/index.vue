@@ -9,17 +9,17 @@
     <QuizCard v-if="isShowDialogs3" @next="isShowDialogs4 = true"
     questionNumber="3" questionText="🐤" answerText="Kotlin（コトリン）" imageName="kotlin.png"></QuizCard>
     <QuizCard v-if="isShowDialogs4" @next="isShowDialogs5 = true"
-    questionNumber="4" questionText="次" answerText="Next.js" imageName="nextjs.png"></QuizCard>
+    questionNumber="4" questionText="古墓流" answerText="COBOL (コボル)" imageName="cobol.png"></QuizCard>
     <QuizCard v-if="isShowDialogs5" @next="isShowDialogs6 = true"
-    questionNumber="5" questionText="古墓流" answerText="COBOL (コボル)" imageName="cobol.png"></QuizCard>
+    questionNumber="5" questionText="ぬるぽ酢" answerText="GAS（ガス）" imageName="gas.png"></QuizCard>
     <QuizCard v-if="isShowDialogs6" @next="isShowDialogs7 = true"
-    questionNumber="6" questionText="炎上した基地" answerText="Firebase" imageName="firebase.png"></QuizCard>
+    questionNumber="6" questionText="海言語" answerText="C言語（シー言語）" imageName="c.png"></QuizCard>
     <QuizCard v-if="isShowDialogs7" @next="isShowDialogs8 = true"
-    questionNumber="7" questionText="絵里www" answerText="elixir (エリクサ)" imageName="elixir.png"></QuizCard>
+    questionNumber="7" questionText="放送禁止 🏩 放送禁止" answerText="PHP（ピーエイチピー）" imageName="php.png"></QuizCard>
     <QuizCard v-if="isShowDialogs8" @next="isShowDialogs9 = true"
-    questionNumber="8" questionText="海言語" answerText="C言語（シー言語）" imageName="c.png"></QuizCard>
+    questionNumber="8" questionText="絵里www" answerText="elixir (エリクサ)" imageName="elixir.png"></QuizCard>
     <QuizCard v-if="isShowDialogs9" @next="isShowDialogs10 = true"
-    questionNumber="9" questionText="凄価羅" answerText="Scala (スカラ)" imageName="scala_black.png"></QuizCard>
+    questionNumber="9" questionText="炎上した基地" answerText="Firebase" imageName="firebase.png"></QuizCard>
     <QuizCard v-if="isShowDialogs10" @next="isShowResult = true"
     questionNumber="10" questionText="乳尊" answerText="Python (パイソン)" imageName="python.png"></QuizCard>
     <Result v-if="isShowResult"></Result>
