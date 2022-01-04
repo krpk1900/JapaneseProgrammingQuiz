@@ -53,6 +53,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: process.env.GAID,
+        debug: true //本番環境以外でもGAを有効にしたい場合はtrueに。
+      }
+    ]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
