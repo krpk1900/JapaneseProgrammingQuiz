@@ -25,7 +25,7 @@ export default {
       { hid: 'og:title', property: 'og:title', content: 'Webエンジニアのくせに解けねぇ奴いる？' },
       { hid: 'og:description', property: 'og:description', content: 'Webエンジニアなら解けるプログラミングなぞなぞです。' },
       { hid: 'og:image', property: 'og:image', content: 'https://programming-quiz.com/ogp.png' },
-      { name: 'twitter:card', content: 'summary_large_image' },　//twitterの画像サイズ summary_large_image
+      { name: 'twitter:card', content: 'summary' },　//twitterの画像サイズ summary_large_image
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
