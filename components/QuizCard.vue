@@ -14,12 +14,12 @@
         <div class="question text-h6 text-md-h4 font-weight-black">「{{ questionText }}」</div>
         <div v-if="isShowAnswer" class="answer-area">
           <div class="img">
-            <img :src="imageName" height="230px">
+            <img :src="imageName" class="logo-img">
           </div>
           <div class="answer-text text-h6 text-md-h4 font-weight-black">{{ answerText }}</div>
         </div>
         <div v-else class="img-hatena">
-          <img src="hatena.png" height="300px">
+          <img src="hatena.png" class="hatena-img">
         </div>
 
         <v-card-actions>
@@ -80,12 +80,34 @@ export default Vue.extend({
 </script>
 
 <style>
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 130px;
+    height: 50px !important;
+  }
+  .hatena-img {
+    height: 300px;
+    max-width: 310px;
+  }
+  .logo-img {
+    height: 230px;
+    max-width: 310px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .btn {
+    width: 200px;
+    height: 60px !important;
+  }
+  .hatena-img {
+    height: 300px;
+  }
+  .logo-img {
+    height: 230px;
+  }
+}
 .card {
   padding: 10px !important;
-}
-.btn {
-  width: 200px;
-  height: 60px !important;
 }
 .btn-left {
   margin: 0 auto 0 15px;
@@ -110,7 +132,6 @@ export default Vue.extend({
 }
 .img-hatena {
   text-align : center;
-  margin: 7px;
 }
 .arrow {
   font-size: 100px;

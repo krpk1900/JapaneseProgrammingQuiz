@@ -7,7 +7,7 @@
       <div class="card red darken-4 black--text">
         <div class="question text-h6 text-md-h4 font-weight-black">Webエンジニアのくせに<br>解けねぇ奴いる？</div>
         <div class="img">
-          <img src="touribe.png" height="400px">
+          <img src="touribe.png" class="touribe">
           <div class="text-caption">Ⓒ和久井健・講談社／<br>アニメ「東京リベンジャーズ」製作委員会</div>
         </div>
         <v-card-actions>
@@ -39,6 +39,17 @@ export default Vue.extend({
 </script>
 
 <style>
+@media screen and (max-width: 480px) {
+  .touribe {
+    height: 350px;
+    max-width: 310px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .touribe {
+    height: 400px;
+  }
+}
 .card {
   padding: 10px !important;
 }
