@@ -55,7 +55,7 @@ export default {
   modules: [
     '@nuxtjs/dotenv',
     ['@nuxtjs/google-gtag', {
-      id: process.env.GAID,
+      id: G-PR4BYSEJ7J,
       debug: false
     }]
   ],
