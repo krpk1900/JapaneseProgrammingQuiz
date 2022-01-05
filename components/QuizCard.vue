@@ -132,6 +132,7 @@ export default Vue.extend({
 }
 .img-hatena {
   text-align : center;
+  margin: 10px 0 5px 0;
 }
 .arrow {
   font-size: 100px;
