@@ -20,9 +20,9 @@
     questionNumber="8" questionText="絵里www" answerText="elixir (エリクサ)" imageName="elixir.png"></QuizCard>
     <QuizCard v-if="isShowDialogs9" @next="isShowDialogs10 = true"
     questionNumber="9" questionText="炎上した基地" answerText="Firebase" imageName="firebase.png"></QuizCard>
-    <QuizCard v-if="isShowDialogs10" @next="isShowResult = true"
+    <QuizCard v-if="isShowDialogs10" @next="reset(); isShowResult = true"
     questionNumber="10" questionText="乳尊" answerText="Python (パイソン)" imageName="python.png"></QuizCard>
-    <Result v-if="isShowResult"></Result>
+    <Result v-if="isShowResult" @restart="receive()"></Result>
 
   </div>
 </template>
@@ -43,12 +43,40 @@ export default Vue.extend({
       isShowDialogs8: false as boolean,
       isShowDialogs9: false as boolean,
       isShowDialogs10: false as boolean,
-      isShowDialogs11: false as boolean,
-      isShowDialogs12: false as boolean,
       isShowResult: false as boolean,
     }
   },
   methods: {
+    reset () {
+      //console.log("すべてfalseにリセット")
+      this.isShowLandingPage = false;
+      this.isShowDialogs1 = false;
+      this.isShowDialogs2 = false;
+      this.isShowDialogs3 = false;
+      this.isShowDialogs4 = false;
+      this.isShowDialogs5 = false;
+      this.isShowDialogs6 = false;
+      this.isShowDialogs7 = false;
+      this.isShowDialogs8 = false;
+      this.isShowDialogs9 = false;
+      this.isShowDialogs10 = false;
+      this.isShowResult = false;
+    },
+    receive () {
+      //console.log("受け取りました。")
+      this.isShowLandingPage = false;
+      this.isShowDialogs1 = true;
+      this.isShowDialogs2 = false;
+      this.isShowDialogs3 = false;
+      this.isShowDialogs4 = false;
+      this.isShowDialogs5 = false;
+      this.isShowDialogs6 = false;
+      this.isShowDialogs7 = false;
+      this.isShowDialogs8 = false;
+      this.isShowDialogs9 = false;
+      this.isShowDialogs10 = false;
+      this.isShowResult = false;
+    },
   }
 })
 </script>
