@@ -54,7 +54,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     ['@nuxtjs/google-gtag', {
-      id: G-PR4BYSEJ7J,
+      id: process.env.GAID,
       debug: false
     }]
   ],
