@@ -53,12 +53,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/google-gtag',
+    '@nuxtjs/dotenv',
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: process.env.GAID,
+        debug: true
+      }
+    ]
   ],
-  'google-gtag': {
-    id: process.env.GAID,
-    debug: true
-  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
