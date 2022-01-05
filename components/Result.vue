@@ -17,8 +17,9 @@
         </div>
 
         <v-card-actions>
-          <v-btn :href="shareMessage()" target="_blank" class="btn light-blue white--text font-weight-bold text-h6" x-large>
-            <v-icon style="font-size: 35px; margin-right: 5px;">mdi-twitter</v-icon>Twitterでシェアする
+          <v-btn class="btn btn-left red lighten-2 white--text subtitle-1 text-md-h5 font-weight-black" @click="restart(); resetScore()" elevation="2">はじめから</v-btn>
+          <v-btn :href="shareMessage()" target="_blank" class="btn btn-right light-blue white--text font-weight-bold text-body-2 text-md-h6" x-large>
+            <v-icon class="twitter-icon">mdi-twitter</v-icon>Twitterでシェア
           </v-btn>
         </v-card-actions>
       </div>
@@ -32,7 +33,7 @@ export default Vue.extend({
   data() {
     return{
       isShowDialog: true as boolean,
-      message: "デフォルトメッセージ" as string,
+      message: "マイキー級エンジニア" as string,
       imageName: "maiki.png" as string,
     }
   },
@@ -40,6 +41,14 @@ export default Vue.extend({
     shareMessage():string {
       return `https://twitter.com/share?url=https://programming-quiz.com/%0a&via=krpk1900_dev&related=krpk1900_dev&hashtags=Webエンジニアのくせに解けねぇ奴いる,クソアプリ%0a&text=あなたの点数は${this.$store.state.score}点でした！%0a${this.message}%0a`
     },
+    restart():void {
+      this.isShowDialog = false;
+      this.$emit('restart')
+    },
+    resetScore():void {
+      console.log(`resetScore()`)
+      this.$store.commit('resetScore');
+    }
   },
   props: {
   },
@@ -63,14 +72,32 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+@media screen and (max-width: 480px) {
+  .btn {
+    text-transform: none !important;
+    width: 140px;
+    height: 50px !important;
+    margin: 10px auto;
+  }
+  .twitter-icon {
+    font-size: 20px;
+    margin-right: 3px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .btn {
+    text-transform: none !important;
+    width: 220px;
+    height: 60px !important;
+    margin: 10px auto;
+  }
+  .twitter-icon {
+    font-size: 35px;
+    margin-right: 5px;
+  }
+}
 .card {
   padding: 10px !important;
-}
-.btn {
-  text-transform: none !important;
-  width: 250px;
-  height: 60px !important;
-  margin: 10px auto;
 }
 .question {
   text-align: center;
