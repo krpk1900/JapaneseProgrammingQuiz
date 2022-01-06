@@ -18,12 +18,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Webエンジニアなら解けるプログラミングなぞなぞです。' },
+      { hid: 'description', name: 'description', content: 'Webエンジニアなら解けるプログラミングクイズです。' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Webエンジニアのくせに解けねぇ奴いる？' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://programming-quiz.com/' },
       { hid: 'og:title', property: 'og:title', content: 'Webエンジニアのくせに解けねぇ奴いる？' },
-      { hid: 'og:description', property: 'og:description', content: 'Webエンジニアなら解けるプログラミングなぞなぞです。' },
+      { hid: 'og:description', property: 'og:description', content: 'Webエンジニアなら解けるプログラミングクイズです。' },
       { hid: 'og:image', property: 'og:image', content: 'https://programming-quiz.com/new_ogp.png' },
       { name: 'twitter:card', content: 'summary_large_image' },　//twitterの画像サイズ summary_large_image
     ],
